@@ -7,11 +7,16 @@ var app = angular.module('todoApp', ['ngRoute', 'directives', 'pages', 'angular-
 app.constant('_',_);
 
 //Google Analytics
-app.config(function (AnalyticsProvider) {
-    // Add configuration code as desired - see below
-    AnalyticsProvider.setAccount('UA-XXXXX-xx');
+app.config(['AnalyticsProvider', function (AnalyticsProvider) {
+    AnalyticsProvider.setAccount('UA-2724688-3');
+    // Track all routes (default is true).
+    AnalyticsProvider.trackPages(true);
+    // Set the domain name
+    AnalyticsProvider.setDomainName('none');
+}]);
 
-});
+// As an example, add the service to the run call:
+app.run(['Analytics', function(Analytics) {}]);
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.

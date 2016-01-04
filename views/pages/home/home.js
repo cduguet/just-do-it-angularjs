@@ -14,6 +14,9 @@ indexPageModule.controller('IndexPageController', ['$scope', 'API', function($sc
 
     $scope.list = API.get();
     $scope.submit = function() {
+        // Create a new tracking event
+        Analytics.trackEvent('click', 'add', $scope.newItem);
+
         $scope.list = API.add({
             name: $scope.newItem,
             done: false
