@@ -2,7 +2,7 @@
  * Created by cristian on 1/1/16.
  */
 
-var indexPageModule = angular.module('indexPageModule',['factories']);
+var indexPageModule = angular.module('indexPageModule',['factories', 'angular-google-analytics']);
 
 // Used inline annotation to prevent breaking functions which use "$scope" injection
 indexPageModule.controller('IndexPageController', ['$scope', 'API', function($scope, API) {
