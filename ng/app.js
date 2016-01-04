@@ -12,7 +12,7 @@ app.config(['AnalyticsProvider', function (AnalyticsProvider) {
     // Track all routes (default is true).
     AnalyticsProvider.trackPages(true);
     // Set the domain name
-    AnalyticsProvider.setDomainName('http://just-do-it.azurewebsites.net/');
+    AnalyticsProvider.setDomainName('none');
 }]);
 
 // As an example, add the service to the run call:

@@ -2,10 +2,10 @@
  * Created by cristian on 1/1/16.
  */
 
-var indexPageModule = angular.module('indexPageModule',['factories', 'angular-google-analytics']);
+var indexPageModule = angular.module('indexPageModule',['factories']);
 
 // Used inline annotation to prevent breaking functions which use "$scope" injection
-indexPageModule.controller('IndexPageController', ['$scope', 'API', function($scope, API) {
+indexPageModule.controller('IndexPageController', ['$scope', 'API', 'Analytics', function($scope, API, Analytics) {
     //app logic
 
     var updateList = function() {
