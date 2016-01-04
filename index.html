@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+<!--Favicon-->
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/ngstorage/ngStorage.min.js"></script>
+<script src="bower_components/underscore/underscore-min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+
+
+<!-- Angular App-->
+<script src="ng/app.js"></script>
+<!--Angular Factory-->
+<script src="ng/factory.js"></script>
+<!--Angular Directives-->
+<script src="views/directives/directives.js"></script>
+<!--Pages-->
+<script src="views/pages/home/home.js"></script>
+<script src="views/pages/archive/archive.js"></script>
+<script src="views/pages/pages.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Just Do it!</title>
+</head>
+<body ng-app="todoApp">
+
+
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <img src="images/checkmark-icon.png" class="pull-left" height="50px" alt="">
+            <a href="#/" class="navbar-brand">Just Do it!</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse" ng-controller="NavigationController">
+            <ul class="nav navbar-nav">
+                <li ng-repeat="menu in menus" class="{{menu.class}}">
+                    <a href="#{{menu.url}}">{{menu.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div ng-view></div>
+
+
+
+</body>
+</html>

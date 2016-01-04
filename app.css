@@ -1,0 +1,13 @@
+body {
+    background-image: url(images/school.png) !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+ul .row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

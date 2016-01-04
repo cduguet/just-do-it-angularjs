@@ -1,0 +1,27 @@
+{
+  "name": "todoApp",
+  "authors": [
+    "Cristian <duguet@gmail.comcd>"
+  ],
+  "description": "1.0",
+  "main": "",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "todo",
+    "app"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}

@@ -1,0 +1,43 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-6">
+            <input type="text" class="input-lg form-control" ng-model="query" placeholder="Search my to dos">
+            <h3>Things to do</h3>
+            <p ng-hide="(list | filter: {done:false}).length">Nothing to do? Let's add some to dos!</p>
+            <ul style="list-style: none">
+                <li ng-repeat="item in list | filter: {name: query, done: false} | orderBy: '-updatedAt'">
+                    <!--custom directive with two elements accepted: todo (object) and update (function) -->
+                    <todo-item todo="item" update="update(item)"></todo-item>
+                </li>
+            </ul>
+                <div class="row" ng-show="(list | filter: {done:true}).length">
+                    <div class="col-md-10">
+                        <hr>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-link pull-right" ng-click="archiveAll()">Archive All</button>
+                    </div>
+                </div>
+            <ul>
+                <li ng-repeat="item in list | filter: {name: query, done: true} | orderBy: 'updatedAt'">
+                    <!--custom directive with two elements accepted: todo (object) and update (function) -->
+                    <todo-item todo="item" update="update(item)"></todo-item>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <form ng-submit="submit()">
+                <input class="input-lg form-control fg-input" type="text" ng-model="newItem" placeholder="Add some to do" required=""/>
+                <br/>
+                <button class="btn btn-primary" type="submit">Submit</button>
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+</div>
