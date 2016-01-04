@@ -2,7 +2,7 @@
  * Created by cristian on 12/8/15.
  */
 
-var app = angular.module('todoApp', ['ngRoute', 'directives', 'pages', 'angular-google-analytics']);
+var app = angular.module('todoApp', ['ngRoute', 'directives', 'pages', 'angular-google-analytics', 'ngRetina']);
 //inject underscore
 app.constant('_',_);
 

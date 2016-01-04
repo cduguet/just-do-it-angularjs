@@ -2,9 +2,10 @@
 
     <div class="row">
         <div class="col-lg-6">
-            <input type="text" class="input-lg form-control" ng-model="query" placeholder="Search my to dos">
+            <input type="text" class="input-lg form-control" ng-model="query" placeholder="Search">
             <h3>Things to do</h3>
-            <p ng-hide="(list | filter: {done:false}).length">Nothing to do? Let's add some to dos!</p>
+            <h3  class="text-center" ng-hide="(list | filter: {done:false}).length" style="color: gray">"Yesterday, you said today. <br> So add something to do"!</h3>
+            <img ng-hide="(list | filter: {done:false}).length" ng-src="images/shia.png" width="154px" style="display: block; margin: auto">
             <ul style="list-style: none">
                 <li ng-repeat="item in list | filter: {name: query, done: false} | orderBy: '-updatedAt'">
                     <!--custom directive with two elements accepted: todo (object) and update (function) -->
@@ -28,7 +29,7 @@
         </div>
         <div class="col-lg-6">
             <form ng-submit="submit()">
-                <input class="input-lg form-control fg-input" type="text" ng-model="newItem" placeholder="Add some to do" required=""/>
+                <input class="input-lg form-control fg-input" type="text" ng-model="newItem" placeholder="Don't let your dreams be dreams" required=""/>
                 <br/>
                 <button class="btn btn-primary" type="submit">Submit</button>
 
