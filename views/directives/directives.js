@@ -24,3 +24,14 @@ directives.directive('archivedItem', function() {
         templateUrl: 'views/directives/archivedItem.html'
     };
 });
+
+directives.directive('adsense', function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        templateUrl: 'views/directives/adsense.html',
+        controller: function() {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        }
+    };
+});
