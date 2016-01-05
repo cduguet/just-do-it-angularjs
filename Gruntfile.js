@@ -11,6 +11,10 @@ module.exports = function(grunt) {
             images: {
                 src: 'images/*',
                 dest: 'public/'
+            },
+            html: {
+                src: 'views/**/*.html',
+                dest: 'public/'
             }
         },
         concat: {
@@ -67,6 +71,16 @@ module.exports = function(grunt) {
                 src: 'all.js',
                 dest: 'public/js'
             }
+        },
+        processhtml: {
+            options: {
+                // Task-specific options go here.
+            },
+            dist: {
+                files: {
+                    'public/index.html': ['index.html']
+                }
+            }
         }
     });
 
@@ -75,8 +89,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-processhtml');
 
     // Default task(s).
-    grunt.registerTask('build-test', ['concat:js', 'concat:css', 'copy:images']);
-    grunt.registerTask('build-prod', ['concat:js', 'concat:css', 'cssmin', 'copy:images', 'uglify']);
+    grunt.registerTask('build-test', ['concat:js', 'concat:css', 'copy:images', 'copy:html']);
+    grunt.registerTask('build-prod', ['concat:js', 'concat:css', 'cssmin', 'copy:images', 'copy:html', 'uglify', 'processhtml']);
 };

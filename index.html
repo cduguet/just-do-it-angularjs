@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<link rel="stylesheet" href="css/app.css">
-<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 
 <!--Favicon-->
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
 
+<!-- build:css css/all.css -->
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+<!-- /build -->
+
+<!-- build:js js/all.js -->
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/ngstorage/ngStorage.min.js"></script>
-<script src="bower_components/angular-google-analytics/dist/angular-google-analytics.js"></script>
 <script src="bower_components/underscore/underscore-min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
-<!--Google Adsense-->
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="bower_components/angular-google-analytics/dist/angular-google-analytics.js"></script>
 <!--Angular Retina-->
 <script src="node_modules/angular-retina/dist/angular-retina.min.js"></script>
-
-
 <!-- Angular App-->
 <script src="ng/app.js"></script>
 <!--Angular Factory-->
@@ -33,6 +33,10 @@
 <script src="views/pages/home/home.js"></script>
 <script src="views/pages/archive/archive.js"></script>
 <script src="views/pages/pages.js"></script>
+<!-- /build -->
+
+<!--Google Adsense-->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 <head>
     <meta charset="UTF-8">
@@ -58,8 +62,6 @@
 </div>
 
 <div ng-view></div>
-
-
 
 </body>
 </html>

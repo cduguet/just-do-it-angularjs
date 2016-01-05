@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--Favicon-->
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="css/all.css">
+
+<script src="js/all.js"></script>
+
+<!--Google Adsense-->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Just Do it!</title>
+</head>
+<body ng-app="todoApp">
+
+
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <img ng-src="images/shia-face.png" class="pull-right" height="50px" alt="">
+            <a href="#/" class="navbar-brand">Just Do it!</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse" ng-controller="NavigationController">
+            <ul class="nav navbar-nav">
+                <li ng-repeat="menu in menus" class="{{menu.class}}">
+                    <a href="#{{menu.url}}">{{menu.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div ng-view></div>
+
+</body>
+</html>

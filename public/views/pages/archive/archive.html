@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <input type="text" class="input-lg form-control" ng-model="query" placeholder="Search">
+            <ul style="list-style: none">
+                <li ng-repeat="archivedItem in archiveList | filter: {name: query} | orderBy: '-updatedAt'">
+                    <!--custom directive with two elements accepted: todo (object) and update (function) -->
+                    <archived-item archivedtodo="archivedItem" undo="undo(archivedItem)"></archived-item>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
